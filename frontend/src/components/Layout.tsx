@@ -1,8 +1,8 @@
 import { NavLink, Outlet } from 'react-router-dom'
 
 const navItems: Array<{ to: string; label: string }> = [
+  { to: '/books', label: 'Shop' },
   { to: '/dashboard', label: 'Dashboard' },
-  { to: '/books', label: 'Books' },
   { to: '/catalog', label: 'Catalog' },
   { to: '/cart', label: 'Cart' },
   { to: '/customers', label: 'Customers' },

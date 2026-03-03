@@ -275,6 +275,198 @@ code {
   color: rgba(233, 238, 252, 0.75);
 }
 
+.booksGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 14px;
+}
+
+.bookCard {
+  border-radius: 16px;
+  background: radial-gradient(800px 400px at 0% 0%, rgba(110, 176, 255, 0.2), transparent 60%),
+    rgba(7, 14, 30, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.bookCoverWrap {
+  overflow: hidden;
+  max-height: 220px;
+}
+
+.bookCover {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.bookContent {
+  padding: 12px 14px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.bookTitle {
+  margin: 0;
+  font-size: 16px;
+}
+
+.bookAuthor {
+  margin: 0;
+  font-size: 13px;
+  color: rgba(233, 238, 252, 0.8);
+}
+
+.bookShort {
+  margin: 4px 0 0;
+  font-size: 13px;
+  color: rgba(233, 238, 252, 0.8);
+}
+
+.bookFooter {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.bookPrice {
+  font-weight: 800;
+  font-size: 18px;
+}
+
+.bookActions {
+  display: flex;
+  gap: 8px;
+}
+
+.btnPrimary {
+  background: linear-gradient(135deg, #62a1ff, #4fffb0);
+  color: #0b1220;
+  border-color: transparent;
+}
+
+.btnPrimary:hover {
+  filter: brightness(1.05);
+}
+
+.btnGhost {
+  background: transparent;
+}
+
+.bookDetail {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 20px;
+}
+
+.bookDetailCoverWrap {
+  border-radius: 18px;
+  overflow: hidden;
+  background: rgba(0, 0, 0, 0.35);
+}
+
+.bookDetailCover {
+  width: 100%;
+  display: block;
+}
+
+.bookDetailContent {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.bookDetailPrice {
+  font-size: 22px;
+  font-weight: 800;
+}
+
+.bookDetailDesc {
+  margin: 0;
+  color: rgba(233, 238, 252, 0.9);
+}
+
+.bookTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.bookDetailActions {
+  margin-top: 10px;
+  display: flex;
+  gap: 8px;
+}
+
+.cartList {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.cartItem {
+  border-radius: 14px;
+  padding: 10px 12px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(7, 14, 30, 0.9);
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.cartItemTitle {
+  font-weight: 600;
+}
+
+.cartItemMeta {
+  font-size: 13px;
+  color: rgba(233, 238, 252, 0.8);
+  display: flex;
+  flex-direction: column;
+}
+
+.cartItemActions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.cartQtyInput {
+  width: 64px;
+  padding: 6px 8px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: rgba(0, 0, 0, 0.25);
+  color: inherit;
+}
+
+.checkoutBox {
+  margin-top: 10px;
+  border-radius: 14px;
+  padding: 12px 14px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: radial-gradient(600px 300px at 80% 0%, rgba(98, 161, 255, 0.28), transparent 60%),
+    rgba(7, 14, 30, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.checkoutLabel {
+  font-size: 12px;
+  color: rgba(233, 238, 252, 0.8);
+}
+
+.checkoutValue {
+  font-size: 24px;
+  font-weight: 800;
+}
+
 @media (max-width: 900px) {
   .contentGrid {
     grid-template-columns: 1fr;
