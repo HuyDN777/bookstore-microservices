@@ -4,8 +4,14 @@ from django.db import models
 class Order(models.Model):
     customer_name = models.CharField(max_length=255, blank=True)
     customer_email = models.EmailField(blank=True)
+    customer_username = models.CharField(max_length=150, blank=True)
     created_at = models.DateTimeField(auto_now_add=True)
     total_price = models.DecimalField(max_digits=12, decimal_places=2)
+    status = models.CharField(
+        max_length=20,
+        default="pending",
+        help_text="Order status: pending / processing / shipped / completed / cancelled",
+    )
 
     class Meta:
         ordering = ["-created_at"]

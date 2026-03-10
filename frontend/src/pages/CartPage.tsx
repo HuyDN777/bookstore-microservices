@@ -2,9 +2,11 @@ import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { useCart } from '../context/CartContext'
 import { createOrder } from '../lib/api'
+import { useAuth } from '../context/AuthContext'
 
 export function CartPage() {
   const { items, totalPrice, totalQuantity, removeItem, updateQuantity, clear } = useCart()
+  const { user } = useAuth()
   const hasItems = items.length > 0
   const [submitting, setSubmitting] = useState(false)
   const [message, setMessage] = useState<string | null>(null)
@@ -17,8 +19,9 @@ export function CartPage() {
     setError(null)
     try {
       const payload = {
-        customer_name: 'Guest',
-        customer_email: 'guest@example.com',
+        customer_name: user?.username ?? 'Guest',
+        customer_email: user?.email ?? 'guest@example.com',
+        customer_username: user?.username ?? '',
         items: items.map((i) => ({
           book_title: i.title,
           unit_price: i.price,

@@ -275,6 +275,67 @@ code {
   color: rgba(233, 238, 252, 0.75);
 }
 
+.authPage {
+  max-width: 420px;
+}
+
+.authForm {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.authField {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 13px;
+}
+
+.authField input {
+  padding: 8px 10px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: rgba(0, 0, 0, 0.2);
+  color: inherit;
+}
+
+.authSubmit {
+  align-self: flex-start;
+  margin-top: 6px;
+}
+
+.topbarRight {
+  margin-left: auto;
+  margin-right: 18px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.topbarUser {
+  font-size: 13px;
+  color: rgba(233, 238, 252, 0.85);
+}
+
+.topbarLink {
+  font-size: 13px;
+  color: rgba(233, 238, 252, 0.85);
+}
+
+.navSectionLabel {
+  margin: 10px 4px 4px;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: rgba(233, 238, 252, 0.5);
+}
+
+.orderItemsList {
+  margin: 0;
+  padding-left: 18px;
+}
+
 .booksGrid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
