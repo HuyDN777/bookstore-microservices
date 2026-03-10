@@ -4,7 +4,7 @@ FROM python:3.10
 WORKDIR /app
 COPY . .
 
-RUN pip install django djangorestframework requests
+RUN pip install django djangorestframework requests django-cors-headers
 
 EXPOSE 8000
 
